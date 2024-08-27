@@ -22,6 +22,9 @@ COPY pyproject.toml poetry.lock ./
 RUN poetry install --no-dev --no-root --no-interaction --no-ansi
 
 FROM python:3.12.1
+RUN apt-get update && \
+    apt-get install -y ffmpeg && \
+    rm -rf /var/lib/apt/lists/*
 WORKDIR /usr/src/app
 
 COPY --from=venv /.venv /usr/src/.venv
