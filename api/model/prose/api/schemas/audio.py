@@ -1,12 +1,13 @@
 from ninja import Schema
 
-# TODO: you might want to add extra data to these schemas (e.g. timestamps, headers, ...) if needed
-
 class TextSchema(Schema):
     text: str
 
 class SpeechSchema(Schema):
-    audio: str # TODO: change to desired type
+    filename: str
+    content_type: str
+    input: str
+    file_url: str
     
 __all__ = [
     "TextSchema",
