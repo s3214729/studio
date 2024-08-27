@@ -17,7 +17,13 @@ django-cors-headers = "^4.3.1"
 daphne = "^4.0.0"
 channels = "^4.0.0"
 sentry-sdk = "^1.40.4"
-
+torch = "2.2.2"
+openai-whisper = {git = "https://github.com/openai/whisper.git"}
+fastapi = "^0.112.1"
+numpy = "1.26.4"
+gtts = "^2.5.3"
+pydantic = "^2.8.2"
+python-multipart = "^0.0.9"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.12.1"
